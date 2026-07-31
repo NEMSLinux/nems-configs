@@ -1,5 +1,9 @@
 #!/bin/bash
+/usr/bin/systemctl daemon-reload
+
+/usr/bin/systemctl restart cockpit.socket
 /usr/bin/systemctl restart monit
+/usr/bin/systemctl restart apache2
 
 # Increase the memory limit for PHP scripts to 512M (default is 128M)
 # This is required for heavier scripts such as NEMS Tactical Overview
