@@ -11,3 +11,7 @@ for file in `find /etc/php/*/apache2/ -name 'php.ini' -exec grep -l "memory_limi
   echo "Increasing PHP script memory limit from 128M to 512M [$file]"
   sed -ir 's/memory_limit\s*=.*/memory_limit = 512M/g' $file
 done
+
+# This impacts the web-based nems-init interface
+chown root:root /etc/sudoers.d/nems-www
+chmod 0440 /etc/sudoers.d/nems-www
