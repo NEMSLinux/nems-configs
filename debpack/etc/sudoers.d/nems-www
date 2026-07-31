@@ -1,4 +1,4 @@
 # NEMS Linux - Web Server Administration Privileges
 
 # Web-based nems-init
-www-data ALL=(ALL) NOPASSWD: /usr/local/bin/nems-init, /usr/bin/timedatectl, /usr/bin/localectl
+www-data ALL=(ALL) NOPASSWD: /usr/local/bin/nems-init, /usr/bin/timedatectl
